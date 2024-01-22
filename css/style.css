@@ -161,7 +161,7 @@ body{
 /* Seccion 1 */
 .container__about{
     width: 100%;
-    padding: 0 2%;
+    padding: 0 1.3%;
 }
 
 .container__about{
@@ -189,6 +189,10 @@ body{
 .about__content h2{
     font-weight: 600;
     margin-bottom: 8px;
+}
+
+.about__content p{
+    text-align: justify;
 }
 
 .about__content:hover{
