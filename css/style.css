@@ -39,6 +39,9 @@ body{
     background-color: #1A202C;
     color: #fff;
     height: 70px;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
 }
 
 .menu__container{
@@ -117,7 +120,7 @@ body{
     padding: 0 15px;
     cursor: pointer;
     display: none;
-}
+} 
 
 .menu__img{
     display: block;
@@ -356,6 +359,8 @@ body{
 .footer .footer__pie__pagina a:hover{
     color: var(--colorBotones);
 }
+
+
 
 
 

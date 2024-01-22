@@ -13,7 +13,7 @@
                 if(subMenu.clientHeight === 0){
                     height = subMenu.scrollHeight;
                 }
-                subMenu.style.height = `$(height)px`;
+                subMenu.style.height = `${height}px`;
             });
         });
     }
@@ -41,4 +41,4 @@
         addClick();
     }
     menu.addEventListener('click', () => list.classList.toggle('menu__links--show'));
-});
+})();
