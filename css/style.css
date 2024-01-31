@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -128,12 +132,17 @@ body{
 
 /* Hero */
 
-.hero{
+/* .hero{
     height: 500px;
     background-image: url("../img/fondo.png");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+} */
+
+.hero{
+    margin: 0;
+
 }
 
 .container__text{
@@ -347,6 +356,27 @@ body{
     font-weight: 300;
     margin: 2em 0;
 }
+
+/* Button up */
+
+.container__btn{
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    padding: 15px 20px;
+    background: var(--colorBotones);
+    color: #fff;
+    border: 1px solid var(--colorBotones);
+    border-radius: 100%;
+    cursor: pointer;
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+.show{
+    transform: scale(1);
+}
+
 
 /* Footer */
 
