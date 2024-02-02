@@ -11,39 +11,33 @@
 <body>
     <header>
         <nav class="nav__container">
+            <a href="#" class="logo">ISTELECOM</a>
             <section class="menu__container">
-                <h1 class="menu__logo">ISTELECOM</h1>
-                <ul class="menu__links">
+                <ul class="menu">
+                    <div class="close"></div>
+                    <li class="menu__item"><a href="#">Inicio</a></li>
                     <li class="menu__item">
-                        <a href="index.html" class="menu__link">Inicio</a>
-                    </li>
-                    <li class="menu__item menu__item--show">
-                        <a href="#" class="menu__link">Nosotros <img src="img/arrow.svg" class="menu__arrow" alt=""></a>
-                        <ul class="menu__nesting">
-                            <li class="menu__inside">
-                                <a href="legal.html" class="menu__link menu__link--inside">Legal</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item--show">
-                        <a href="#" class="menu__link">Servicios <img src="img/arrow.svg" class="menu__arrow" alt=""> </a>
-                        <ul class="menu__nesting">
-                            <li class="menu__inside">
-                                <a href="fibraoptica.html" class="menu__link menu__link--inside">Fibra Óptica </a>
-                            </li>
-                            <li class="menu__inside">
-                                <a href="#" class="menu__link menu__link--inside">Antena</a>
-                            </li>
+                        <a class="item" href="#">Nosotros <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub__menu">
+                            <li class="sub__item"><a href="#">Legal</a></li>
                         </ul>
                     </li>
                     <li class="menu__item">
-                        <a href="contact.html" class="menu__link">Contacto</a>
+                        <a class="item" href="#">Servicios <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub__menu">
+                            <li class="sub__item more">
+                                <a class="more__button" href="#">Internet <i class="fas fa-angle-right"></i></a>
+                                <ul class="more__menu">
+                                    <li class="more__item"><a href="#">Fibra Óptica</a></li>
+                                    <li class="more__item"><a href="#">Antena</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
+                    <li class="menu__item"><a href="#">Contacto</a></li>
                 </ul>
-                <div class="menu__hamburguer">
-                    <img src="img/menu.svg" alt="Menu de hamburguesa" class="menu__img">
-                </div>
             </section>
+            <div class="menu__hamburguer"></div>
         </nav>
         <section class="hero">
             <video src="video/Presentacion.mp4" autoplay loop muted style="width: 100%;"></video>
@@ -155,9 +149,9 @@
         </section>
     </main>
     <div class="elfsight-app-8ff65895-90db-4930-aa2d-2c80811f96fe" data-elfsight-app-lazy></div>
-    <button class="container__btn" id="btn_up">
+    <!-- <button class="container__btn" id="btn_up">
         <i class="fa-solid fa-caret-up"></i>
-    </button>
+    </button> -->
     <footer class="footer">
         <div class="container">
             <h2 class="titulo__seccion">MÁS INFORMACIÓN</h2>
@@ -185,8 +179,29 @@
     </footer>
     <script src="js/nav.js"></script>
     <script src="js/according.js"></script>
-    <script src="js/button-up.js"></script>
+    <!-- <script src="js/button-up.js"></script> -->
     <script src="https://kit.fontawesome.com/606c549007.js" crossorigin="anonymous"></script>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".item").click(function(){
+                $(this).next(".sub__menu").slideToggle();
+            });
+            $(".more__button").click(function(){
+                $(this).next(".more__menu").slideToggle();
+            });
+        });
+        var menu = document.querySelector(".menu");
+        var menuHamburguer = document.querySelector(".menu__hamburguer");
+        var close = document.querySelector(".close");
+
+        menuHamburguer.addEventListener("click", () => {
+            menu.classList.add("active");
+        });
+        close.addEventListener("click", () => {
+            menu.classList.remove("active");
+        });
+    </script>
 </body>
 </html>
